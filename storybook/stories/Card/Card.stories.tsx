@@ -1,9 +1,13 @@
 import React from 'react';
-import Card from './index';
+import ImageBackgroundCard from './index';
 import { storiesOf } from '@storybook/react-native';
 import CenterView from '../CenterView';
 
-storiesOf('Card', module)
+storiesOf('ImageBackgroundCard', module)
   .addDecorator((getStory: any) => <CenterView>{getStory()}</CenterView>)
-  .add('little', () => <Card size={100} />)
-  .add('big', () => <Card size={200} />);
+  .add('little', () => (
+    <ImageBackgroundCard
+      text="DAILY DRESS"
+      imageURL="https://i.ibb.co/30TT21D/dress.jpg"
+    />
+  ));

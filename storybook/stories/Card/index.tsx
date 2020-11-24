@@ -1,21 +1,27 @@
 import React from 'react';
-import { View } from 'react-native';
+import { ImageBackground, Text, View } from 'react-native';
 import styles from './style';
 
-interface CardProps {
-  size?: number;
+interface ImageBackgroundCardProps {
+  text?: string;
+  style?: object;
+  imageURL?: string;
 }
 
-function Card({ size }: CardProps) {
+function ImageBackgroundCard({
+  style,
+  text,
+  imageURL,
+}: ImageBackgroundCardProps) {
   return (
-    <View
-      style={[
-        styles.container,
-        {
-          height: size,
-          width: size,
-        },
-      ]}></View>
+    <View style={[styles.container, style]}>
+      <ImageBackground
+        style={styles.image}
+        source={{ uri: imageURL }}></ImageBackground>
+      <View style={styles.wrapper}>
+        <Text style={styles.text}>{text + ' >'}</Text>
+      </View>
+    </View>
   );
 }
-export default Card;
+export default ImageBackgroundCard;
