@@ -13,12 +13,7 @@
     "pod": "cd ios && pod install && cd .."
   },
   "dependencies": {
-    "@keikei/basket-buttons": "0.0.4",
-    "@keikei/basket-item": "^0.0.1",
-    "@keikei/button": "^0.0.1",
-    "@keikei/credit-card-input": "^0.0.2",
-    "@keikei/kk-ui-kit": "^0.0.4",
-    "@keikei/text": "^0.0.1",
+    "@keikei/kk-ui-kit": "0.0.10",
     "react": "16.13.1",
     "react-native": "0.63.4",
     "react-native-vector-icons": "^7.1.0"

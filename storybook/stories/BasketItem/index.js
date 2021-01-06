@@ -1,10 +1,10 @@
 import React from "react";
-import { Button } from "@keikei/button";
+import { Button } from "@keikei/kk-ui-kit";
 import { View, Image, Dimensions, StyleSheet } from "react-native";
 import Ionicons from "react-native-vector-icons/Ionicons";
-import { Text } from "@keikei/text";
+import { Text } from "@keikei/kk-ui-kit";
 import AntDesignIcon from "react-native-vector-icons/AntDesign";
-import { BasketButtons } from "@keikei/basket-buttons";
+import { BasketButtons } from "@keikei/kk-ui-kit";
 
 const BasketItem = ({ basket }) => {
   return (

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { Button } from "@keikei/button";
+import { Button } from "@keikei/kk-ui-kit";
 import { View, StyleSheet } from "react-native";
-import { Text } from "@keikei/text";
+import { Text } from "@keikei/kk-ui-kit";
 import FeatherIcon from "react-native-vector-icons/Feather";
 
 const BasketButtons = ({ initialAmount, amount }) => {
