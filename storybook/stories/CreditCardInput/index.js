@@ -14,6 +14,7 @@ import Feather from "react-native-vector-icons/Feather";
 
 const height = Dimensions.get("screen").height;
 
+
 const CreditCardInput = () => {
   const [secondCardOpen, setSecondCardOpen] = useState(false);
   const [firstCardInput, setFirstCardInput] = useState(false);
