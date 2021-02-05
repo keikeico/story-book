@@ -11,6 +11,7 @@ const Button = ({
   children,
   width,
   height,
+  labelStyle,
   ...TouchableOpacityProps
 }) => {
   return (
@@ -21,18 +22,26 @@ const Button = ({
         style,
         {
           backgroundColor: bgColor ? bgColor : "#8d8eb9",
-          width: width ? width : 160,
-          height: height ? height : 44,
+          width: style ? (style.width ? style.width : 160) : 160,
+          height: style ? (style.height ? style.height : 40) : 40,
+          borderRadius: style
+            ? style.borderRadius
+              ? style.borderRadius
+              : 25
+            : 25,
         },
         styles.button,
       ]}
     >
       {label && (
         <Text
-          style={{
-            color: textColor ? textColor : "#fff",
-            fontSize: size ? size : 12,
-          }}
+          style={[
+            labelStyle,
+            {
+              color: textColor ? textColor : "#fff",
+              fontSize: size ? size : 12,
+            },
+          ]}
         >
           {label}
         </Text>
@@ -46,7 +55,6 @@ const styles = StyleSheet.create({
   button: {
     justifyContent: "center",
     alignItems: "center",
-    borderRadius: 25,
   },
 });
 
